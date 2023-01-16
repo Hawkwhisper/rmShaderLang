@@ -1,0 +1,51 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "RMS Code",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.rms",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "vector.def.rms",
+				"match": "\\b(vec2|vec3|vec4)\\b"
+			},
+			{
+				"name": "variable",
+				"match": "\\b(float|int|bool|in|out|varying|mat2|mat3|mat4|const)\\b"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "keyword.control.rms",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.rms",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.rms",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.rms"
+}

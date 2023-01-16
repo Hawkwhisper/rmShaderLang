@@ -1,0 +1,35 @@
+{
+  "name": "rms-theme",
+  "displayName": "rms_theme",
+  "description": "RPG Maker Shader Lang Highlighting",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rms",
+      "aliases": ["RMS Code", "rms"],
+      "extensions": [".rms"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rms",
+      "scopeName": "source.rms",
+      "extensions": [".rms"],
+      "path": "./syntaxes/rms.tmLanguage.json"
+    }],
+    "themes": [
+      {
+        "label": "rms_theme",
+        "uiTheme": "vs-dark",
+      "extensions": [".rms"],
+      "path": "./themes/theme.json"
+      }
+    ]
+  }
+}
